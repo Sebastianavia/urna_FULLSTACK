@@ -1,0 +1,21 @@
+
+.candidateConteiner{
+    background: #eb525252;
+    display: flex;
+    flex-direction: column;
+    
+    align-items: center;
+    justify-content: center;
+    height: 350px;
+    width: 150px;
+    
+    
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-right: 10px;
+    margin-left: 120px;
+    margin-bottom: 5px;
+    float: left;
+   
+    
+}
