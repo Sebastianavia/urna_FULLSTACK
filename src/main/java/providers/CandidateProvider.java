@@ -56,8 +56,8 @@ public class CandidateProvider {
 
 
 
-    public void add1Vote(Candidate candidate )  throws SQLException {
-        String sql = ("UPDATE candidatos=$CANDIDATOS SET votos= $VOTOS WHERE id=$ID");
+    public void add1Vote( int id,Candidate candidate)  throws SQLException {
+        String sql = ("UPDATE votaciones  SET votos= $VOTOS WHERE id=$ID");
 
         int votos = candidate.getVotos() + 1;
         candidate.setVotos(votos);

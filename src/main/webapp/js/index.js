@@ -8,8 +8,7 @@ const candidateConteiner  = document.getElementById('candidateConteiner');
 
 
 const getAllUsers = () =>{
-    let number = numberImg;
-    console.log(number);
+   
 
     let xhr = new XMLHttpRequest();
     xhr.addEventListener('readystatechange', ()=>{
@@ -18,9 +17,9 @@ const getAllUsers = () =>{
             let response = JSON.parse(json);
             console.log(response);
             for(let i = 0; i < response.length ; i++){
-            let userDTO = new User(response[i].id,response[i].candidato,response[i].votos,response[i].foto);
-            let view = new UserView(userDTO);
-            usersContainer.appendChild( view.render() );
+            let userDTO = new Candidate(response[i].id,response[i].candidato,response[i].votos,response[i].foto);
+            let view = new CandidateView(userDTO);
+            candidateConteiner.appendChild( view.render() );
             }
         }
     });

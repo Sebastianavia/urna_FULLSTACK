@@ -13,7 +13,7 @@ class CandidateView{
         });
         xhr.open('PUT','http://localhost:8080/urna_FULLSTACK/api/candidatos/addVote/'+this.candidate.id)
         xhr.send();
-        console.log(this.user.totalVotos);
+        console.log(this.candidate.votos);
     }
 
 
@@ -21,15 +21,15 @@ class CandidateView{
 
         let component = document.createElement('div');
         component.className = 'candidateComponent';
-        let fotoCandidato = document.createElement('img');
-        fotoCandidato.src = this.user.fotoCandidato;
-        fotoCandidato.className = 'imagenCandidato';
-        fotoCandidato.innerHTML = this.user.fotoCandidato;
+        let foto = document.createElement('img');
+        foto.src = this.candidate.foto;
+        foto.className = 'imagen';
+        foto.innerHTML = this.candidate.foto;
         let votarBtn = document.createElement('votarBtn');
         votarBtn.innerHTML = 'Votar';
         votarBtn.className = 'vote';
 
-        component.appendChild(fotoCandidato);
+        component.appendChild(foto);
         component.appendChild(votarBtn)
 
         votarBtn.addEventListener('click' , this.addVote); 

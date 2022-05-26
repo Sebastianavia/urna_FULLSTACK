@@ -54,13 +54,13 @@ public class CandidateService {
 
 
     @PUT
-    @Path("addVote/{nameparam}")
-    public javax.ws.rs.core.Response addVote(@PathParam("nameparam") int id){
+    @Path("addVote/{id}")
+    public javax.ws.rs.core.Response addVote(@PathParam("id") int id){
         try {
             CandidateProvider provider = new CandidateProvider();
-            String name="";
             Candidate candidate = provider.candidate(id);
-            provider.add1Vote(candidate);
+            System.out.println("Candidato 1: "+candidate.getCandidato());
+            provider.add1Vote(candidate.getId(),candidate);
             return  Response
                     .ok(new Message("operacion exitosa"))
                     .header("Content-Type","application/json")
