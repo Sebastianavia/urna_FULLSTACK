@@ -20,10 +20,65 @@
     
 }
 
-.imagen{
+
+
+body{
+    margin: 3.5rem 0 0 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: .938rem;
+    background: linear-gradient(90deg,#dbee7d 0%, #28ca87 50%);
+}
+
+#titles{
+
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    margin: 0 auto;
 
 }
 
-.candidateConteiner{
+#title1{
 
+    text-align: center;
+
+   color: rgb(255, 255, 255);
+   font-weight: 900;
+
+}
+
+#title2{
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+ 
+}
+
+#colombia{
+
+    width: 100px;
+    flex-direction: column;
+    width: 30%;
+    margin: 0 auto;
+
+
+}
+
+
+
+#candidateConteiner{
+
+    
+}
+
+#candidateConteiner{
+
+    text-align: center;
+
+}
+
+
+#imagen{
+    width: 200%;
+    margin: 15px auto;
 }
